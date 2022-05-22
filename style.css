@@ -16,7 +16,7 @@ header {
 
 img {
     width: 80%;
-    border-radius: 7px;
+    border-radius: 2rem;
 }
 
 .background_blue {
@@ -29,6 +29,7 @@ img {
     /* border: 1px solid green; */
     display: flex;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -145,32 +146,31 @@ img {
 }
 
 
-
-
 .card_container {
     width: 75%;
-    height: 1300px;
-    /* border: 1px solid green; */
+    height: 100%;
+    border: 1px solid green;
 }
 
 .grid_layout {
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-rows: repeat(2, 1fr);
+
 }
 
 .card_grid {
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
     height: 100%;
+    width: 97%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .card {
-    /* border: 1px solid black; */
-    border-radius: 7px;
+    border: 1px solid black;
+    border-radius: 20px;
     box-shadow: 0 0 50px #ccc;
     height: 80%;
     width: 80%;
@@ -179,25 +179,30 @@ img {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 2rem;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .card_head img {
     width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .card_body {
     /* border: 1px solid palegreen; */
     display: flex;
-    padding: 1rem;
+    position: relative;
+    height: 120px;
+    overflow: hidden;
 }
 
 .card_footer {
     /* border: 1px solid slateblue; */
-    height: 10%;
+    height: 50px;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     
 }
@@ -206,5 +211,32 @@ img {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+    .grid_layout {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 578px) {
+    .grid_layout {
+    display: grid; 
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    }
+
+    img {
+        width: 100%;
+        height: 150px;
+    }
+
+    .card_footer {
+        display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
 }
 
